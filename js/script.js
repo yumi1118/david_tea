@@ -27,14 +27,14 @@ const vm = Vue.createApp({
         {
           id: '4',
           itemName: '蜜香紅茶',
-          imgUrl: 'images/d07.JPG',
+          imgUrl: 'images/d07.jpg',
           price: '1800',
           count: '1'
         },
         {
           id: '5',
           itemName: '凍頂烏龍茶',
-          imgUrl: 'images/d08.JPG',
+          imgUrl: 'images/d08.jpg',
           price: '1200',
           count: '1'
         },
