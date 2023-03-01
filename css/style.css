@@ -1,6 +1,7 @@
 
 body{
     background-color:rgb(129, 96, 66);
+    cursor: url('../tea.cur'), pointer;
 }
 .item_header{
     display: flex;

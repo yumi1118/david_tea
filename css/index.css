@@ -5,6 +5,7 @@ body{
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
+    cursor: url('../tea.cur'), pointer;
 }
 .col-lg-5{
     background-color: rgba(28, 146, 67, 0.62);

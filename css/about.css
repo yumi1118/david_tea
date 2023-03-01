@@ -1,5 +1,6 @@
 body {
     font-family: Microsoft JhengHei;
+    cursor: url('../tea.cur'), pointer;
 }
 #banner {
     background-image: url(../images/banner.jpg);
