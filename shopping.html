@@ -12,95 +12,97 @@
 </head>
 
 
-        <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <meta http-equiv="X-UA-Compatible" content="ie=edge">
-                <!-- Bootstrap CSS -->
-                <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-                <link rel="stylesheet" type="text/css" href="css/index.css" />
-                <link rel="stylesheet" type="text/css" href="css/style.css" />
-                <!-- 網頁 icon -->
-                <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-                <title>茶米 ． David購物車</title>
-            </head>
-            
-            <body>
-                <header>
-                    <nav class="navber nabver-expand-lg navbar-dark bg-dark fixed-top">
-                        <div class="container">
-                            <a class="navbar-brand" href="index.html">茶米 ． David</a>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
-                                aria-expanded="false" aria-label="toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarNav">
-                                <ul class="navbar-nav ms-auto">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="index.html">首頁</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="about.html">關於我們</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="product.html">產品介紹</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="tea.html">奉茶教學</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="teafood.html">茶點商品</a>
-                                    </li>
-                                    <li class="nav-item">
-                                            <a class="nav-link" href="shopping.html">購物車</a>
-                                        </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
-                    <div class="col-lg-5 text-center text-white p-2"></div>
-    <div id="app">
-        <div class="container">
-            <div class="item_header">
-                <div class="item_detail">商品</div>
-                <div class="price">單價</div>
-                <div class="count">數量</div>
-                <div class="amount">總計</div>
-                <div class="operate">操作</div>
-            </div>
-            <!-- 1. 加入v-for -->
-            <div class="item_container" v-for="(item,index) in itemList" :key="item.id">
-                <div class="item_header item_body">
-                    <div class="item_detail">
-                        <!-- 2. 將網頁顯示的資料改為利用vue建立的data內容-->
-                        <img :src="item.imgUrl" alt="">
-                        <div class="name">{{item.itemName}}</div>
-                    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- 網頁 icon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>茶米 ． David購物車</title>
+</head>
 
-                    <div class="price"><span>$</span>{{item.price}}</div>
-                    <!-- 2. 將網頁顯示的資料改為利用vue建立的data內容-->
-                    <!-- 3. 控制購買數量加減及合計-->
-                    <div class="count">
-                        <button @click="item.count==0 ? 0 : item.count--">-</button>
-                        {{item.count}}
-                        <button @click="item.count++">+</button>
-                    </div>
-                    <div class="amount">{{item.price * item.count}}</div>
-                    <div class="operate">
-                        <!-- 4. 撰寫function刪除資料-->
-                        <button @click="itemDel(index,1)">刪除</button>
+<body>
+    <header>
+        <nav class="navber nabver-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">茶米 ． David</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">首頁</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">關於我們</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="product.html">產品介紹</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tea.html">奉茶教學</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="teafood.html">茶點商品</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shopping.html">購物車</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="vip.html">加入會員</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="col-lg-5 text-center text-white p-2"></div>
+        <div id="app">
+            <div class="container">
+                <div class="item_header">
+                    <div class="item_detail">商品</div>
+                    <div class="price">單價</div>
+                    <div class="count">數量</div>
+                    <div class="amount">總計</div>
+                    <div class="operate">操作</div>
+                </div>
+                <!-- 1. 加入v-for -->
+                <div class="item_container" v-for="(item,index) in itemList" :key="item.id">
+                    <div class="item_header item_body">
+                        <div class="item_detail">
+                            <!-- 2. 將網頁顯示的資料改為利用vue建立的data內容-->
+                            <img :src="item.imgUrl" alt="">
+                            <div class="name">{{item.itemName}}</div>
+                        </div>
+
+                        <div class="price"><span>$</span>{{item.price}}</div>
+                        <!-- 2. 將網頁顯示的資料改為利用vue建立的data內容-->
+                        <!-- 3. 控制購買數量加減及合計-->
+                        <div class="count">
+                            <button @click="item.count==0 ? 0 : item.count--">-</button>
+                            {{item.count}}
+                            <button @click="item.count++">+</button>
+                        </div>
+                        <div class="amount">{{item.price * item.count}}</div>
+                        <div class="operate">
+                            <!-- 4. 撰寫function刪除資料-->
+                            <button @click="itemDel(index,1)">刪除</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </header>
-            <!-- 1. 加入v-for -->
-            <!-- Optional JavaScript -->
+    <!-- 1. 加入v-for -->
+    <!-- Optional JavaScript -->
     <script src="js/bootstrap.js"></script>
-</div>
-</div>
-<script src="js/script.js"></script>
+    </div>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
-      

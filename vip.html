@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/vip.css" />
+    <!-- 網頁 icon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>加入會員</title>
+</head>
+
+<bady> 
+    <header>
+        <nav class="navber nabver-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">茶米 ． David</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+                    aria-expanded="false" aria-label="toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">首頁</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">關於我們</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="product.html">產品介紹</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tea.html">奉茶教學</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="teafood.html">茶點商品</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="shopping.html">購物車</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="vip.html">加入會員</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        </header>
+   
+ 
+    <fieldset>
+        <legend>加入會員</legend>
+        <form>
+            <h3><label for="fname">姓名:</label>
+                <input type="text" id="fname" name="fname" value=""></h3>
+        </form>
+        <form>
+            <h3>性別:   <input type="radio" id="html" name="fav_language" value="男">   <label for="html">男</label>
+                <input type="radio" id="css" name="fav_language" value="女">   <label for="css">女</label>
+                </label></h3>
+        </form>
+
+        <form action="/action_page.php">
+            <label for="cars"><h3>此次購買的茶葉(可複選):</label> <br><br>
+               
+            <select name="specialty" id="specialty" multiple>
+                <option value="1">大禹嶺茶</option>
+                <option value="2">梨山茶</option>
+                <option value="3">阿里山茶</option>
+                <option value="4">蜜香紅茶</option>
+                <option value="5">凍頂烏龍茶</option>
+            </select><br><br></h3>
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>其它資訊</legend>
+        <p>您喜歡那些茶?(可複選))</p>
+
+        <form action="/action_page.php">
+            <input type="checkbox" id="vehicle1" name="大禹嶺茶" value="大禹嶺茶">
+            <label for="vehicle1"> 大禹嶺茶</label>
+            <input type="checkbox" id="vehicle2" name="梨山茶" value="梨山茶">
+            <label for="vehicle2"> 梨山茶</label>
+            <input type="checkbox" id="vehicle3" name="阿里山茶" value="阿里山茶">
+            <label for="vehicle3"> 阿里山茶</label>
+            <input type="checkbox" id="vehicle3" name="蜜香紅茶" value="蜜香紅茶">
+            <label for="vehicle3"> 蜜香紅茶</label>
+            <input type="checkbox" id="vehicle3" name="凍頂烏龍茶" value="凍頂烏龍茶">
+            <label for="vehicle3"> 凍頂烏龍茶</label>
+            <input type="checkbox" id="vehicle3" name="其它" value="其它">
+            <label for="vehicle3"> 其它</label>
+<br>
+        
+        <p>有任何意見指教請填寫告訴我們^^</p>
+        <textarea name="" id="" cols="30" rows="10"></textarea><br>
+        <input type="submit" value="傳送資料">
+        <input type="reset" value="清除資料">
+    </fieldset>
+</form>
+</body>
+</html>
